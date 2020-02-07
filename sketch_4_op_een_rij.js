@@ -40,20 +40,29 @@ function draw() {
   console.log(mouseX, mouseY);
 }
 
+function calculateX(a) {
+  if (a < 120) {
+    return 60;
+  } 
+
+  return a;
+}
+
 //Change Player
 function mouseClicked () {
 
+  var x = calculateX(mouseX);
+
   if (currentPlayer == "rood") {
     fill (255, 0, 0);
-    ellipse(mouseX, mouseY, 60, 60);
+    ellipse(x, 780, 60, 60);
     currentPlayer = "geel";
   } else {
     fill (239, 247, 8);
-    ellipse(mouseX, mouseY, 60, 60);
+    ellipse(x, 780, 60, 60);
     currentPlayer = "rood";
-  
   }
-  
+
 
   /*   
    if (mouseX < 420) {
