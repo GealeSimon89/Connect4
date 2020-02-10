@@ -21,7 +21,7 @@ function setup() {
 
 function draw() {
   tellertje +=1;
-  console.log(tellertje);
+ //console.log(tellertje);
 
 
   fill(239, 247, 8);
@@ -37,15 +37,23 @@ function draw() {
   //ellipse(420, 420, 60);
   //ellipse(660, 660, 60);
 
-  console.log(mouseX, mouseY);
+  //console.log(mouseX, mouseY);
 }
-
+//Drop Fiche
 function calculateX(a) {
-  if (a < 120) {
-    return 60;
-  } 
-
-  return a;
+  var x = mouseX;
+  var b = round(x/120 + 0.5);
+  console.log("b", b);
+  var posX = 60 + 120 * (b - 1);
+  return posX;
+  
+  //if (a < 120) {
+   // return 60;
+ // } else if (a < 240) {
+  //  return 60+120;
+ // } 
+  
+  //return a;
 }
 
 //Change Player
